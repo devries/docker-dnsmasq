@@ -11,4 +11,4 @@ p2 = subprocess.Popen(['docker','inspect']+process_list,stdout=subprocess.PIPE)
 inspect_data = json.loads(p2.communicate()[0])
 
 for container in inspect_data:
-    print container['NetworkSettings']['IPAddress'],connection['Name'].lstrip('/')
+    print container['NetworkSettings']['IPAddress'],container['Name'].lstrip('/')
