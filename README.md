@@ -24,7 +24,10 @@ docker run -d -v /path/to/althosts:/etc/althosts -p 53:53/udp devries/dnsmasq
 DNS requests for `server1`, `server2`, and `server3` will now show up as
 192.1681.3, 192.168.1.4, and 192.168.1.5 respectively.
 
-> For convenience, an inotify task is present to restart the server whenever it
-detects changes to the `/etc/althosts` file. Thus, if you volume mount your
-althosts file as demostrated above, simply editing the text file on the host
-will automatically be reflected in the server. DO NOT DO THIS IN PRODUCTION!!!
+> For convenience, on the "autoreload" branch an inotify task is present to
+restart the server whenever it detects changes to the `/etc/althosts` file.
+Thus, if you volume mount your althosts file as demostrated above, simply
+editing the text file on the host will automatically be reflected in the
+server. DO NOT DO THIS IN PRODUCTION!!!
+
+Many thanks to Rion Dooley for contributing the inotify addition.

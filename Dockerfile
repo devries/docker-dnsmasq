@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Rion Dooley <dooley@tacc.utexas.edu>
+MAINTAINER Christopher De Vries <devries@idolstarastronomer.com>
 
 RUN apt-get update && apt-get install -y dnsmasq dnsutils inotify-tools && apt-get clean
 
